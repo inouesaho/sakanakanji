@@ -37,7 +37,20 @@ jobs:
         run: npm run build
       
       - name: Debug Build Output
-        run: ls -la ./dist
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Build directory contents:"
+          ls -la ./dist || echo "dist directory not found!"
+      
+      - name: Validate Build Directory
+        run: |
+          if [ ! -d "./dist" ]; then
+            echo "Build directory does not exist!"
+            exit 1
+          fi
+          echo "Build directory exists and contains:"
+          ls -la ./dist
       
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -46,7 +59,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
+          retention-days: 1
       
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact_name: github-pages
