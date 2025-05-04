@@ -5,13 +5,11 @@ on:
     branches: ['main']
   workflow_dispatch:
 
-# GitHubページへのデプロイに必要な権限を設定
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 同時実行を制御
 concurrency:
   group: 'pages'
   cancel-in-progress: true
@@ -27,10 +25,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
       
       - name: Install dependencies
-        run: npm install
+        run: npm clean-install
       
       - name: Build
         run: npm run build
@@ -42,23 +39,21 @@ jobs:
           echo "Build directory contents:"
           ls -la ./dist || echo "dist directory not found!"
       
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
-          retention-days: 1
+          path: ./dist
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
