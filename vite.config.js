@@ -17,6 +17,7 @@ function jsonPlugin() {
 }
 
 export default defineConfig({
+  base: '/sakanakanji/',  // リポジトリ名を指定
   plugins: [vue(), jsonPlugin()],
   assetsInclude: ['**/*.json'],
   optimizeDeps: {
