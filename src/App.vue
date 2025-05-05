@@ -32,7 +32,6 @@
             </div>
           </div>
           <div class="detail-info">
-            <div>部首：{{ selectedKanji.bushu }}</div>
             <div>画数：{{ selectedKanji.strokes }}</div>
           </div>
           <div class="detail-description">{{ selectedKanji.description }}</div>
