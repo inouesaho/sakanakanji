@@ -7,7 +7,7 @@
       <div class="kanji-grid">
         <div v-for="kanji in kanjiList" :key="kanji.id" class="kanji-card" @click="showDetail(kanji)">
           <div class="kanji">{{ kanji.kanji }}</div>
-          <div class="reading">{{ kanji.reading.kun.join('、') }}</div>
+          <div class="reading">{{ kanji.reading.kun.primary.join('、') }}</div>
         </div>
       </div>
       
@@ -17,8 +17,19 @@
           <div class="modal-close" @click="closeDetail">×</div>
           <div class="detail-kanji">{{ selectedKanji.kanji }}</div>
           <div class="detail-readings">
-            <div>訓読み：{{ selectedKanji.reading.kun.join('、') }}</div>
-            <div>音読み：{{ selectedKanji.reading.on.join('、') }}</div>
+            <div class="reading-section">
+              <div class="reading-label">訓読み：</div>
+              <div>
+                <div>{{ selectedKanji.reading.kun.primary.join('、') }}</div>
+                <div v-if="selectedKanji.reading.kun.alternative.length > 0" class="alternative-reading">
+                  その他：{{ selectedKanji.reading.kun.alternative.join('、') }}
+                </div>
+              </div>
+            </div>
+            <div class="reading-section">
+              <div class="reading-label">音読み：</div>
+              <div>{{ selectedKanji.reading.on.join('、') }}</div>
+            </div>
           </div>
           <div class="detail-info">
             <div>部首：{{ selectedKanji.bushu }}</div>
@@ -33,61 +44,76 @@
 
 <script>
 const kanjiData = {
-  "kanji_list": [
+  kanji_list: [
     {
-      "id": 1,
-      "kanji": "鮪",
-      "reading": { 
-        "kun": ["まぐろ", "しび"],
-        "on": ["ゆう", "き"]
+      id: 1,
+      kanji: "鮪",
+      reading: { 
+        kun: {
+          primary: ["まぐろ"],
+          alternative: ["しび"]
+        },
+        on: ["ゆう", "き"]
       },
-      "bushu": "魚",
-      "strokes": 17,
-      "description": "大型の回遊魚。赤身の身は刺身や寿司の代表的な魚として知られる。マグロの中でも特に本マグロ（クロマグロ）は「海の大物」として珍重される。"
+      bushu: "魚",
+      strokes: 17,
+      description: "大型の回遊魚。赤身の身は刺身や寿司の代表的な魚として知られる。マグロの中でも特に本マグロ（クロマグロ）は「海の大物」として珍重される。"
     },
     {
-      "id": 2,
-      "kanji": "鯖",
-      "reading": { 
-        "kun": ["さば"],
-        "on": ["せい"]
+      id: 2,
+      kanji: "鯖",
+      reading: { 
+        kun: {
+          primary: ["さば"],
+          alternative: []
+        },
+        on: ["せい"]
       },
-      "bushu": "魚",
-      "strokes": 15,
-      "description": "背中が青く、腹が銀白色の魚。DHAやEPAが豊富で栄養価が高い。しめ鯖や味噌煮が代表的な料理。"
+      bushu: "魚",
+      strokes: 15,
+      description: "背中が青く、腹が銀白色の魚。DHAやEPAが豊富で栄養価が高い。しめ鯖や味噌煮が代表的な料理。"
     },
     {
-      "id": 3,
-      "kanji": "鮭",
-      "reading": { 
-        "kun": ["さけ", "しゃけ"],
-        "on": ["かい", "けい"]
+      id: 3,
+      kanji: "鮭",
+      reading: { 
+        kun: {
+          primary: ["さけ"],
+          alternative: ["しゃけ"]
+        },
+        on: ["かい", "けい"]
       },
-      "bushu": "魚",
-      "strokes": 15,
-      "description": "産卵期になると川を上る習性を持つ魚。身は鮮やかなピンク色で、焼き魚や塩辛、切り身など様々な料理に使われる。"
+      bushu: "魚",
+      strokes: 15,
+      description: "産卵期になると川を上る習性を持つ魚。身は鮮やかなピンク色で、焼き魚や塩辛、切り身など様々な料理に使われる。"
     },
     {
-      "id": 4,
-      "kanji": "鯛",
-      "reading": { 
-        "kun": ["たい"],
-        "on": ["ちょう"]
+      id: 4,
+      kanji: "鯛",
+      reading: { 
+        kun: {
+          primary: ["たい"],
+          alternative: []
+        },
+        on: ["ちょう"]
       },
-      "bushu": "魚",
-      "strokes": 15,
-      "description": "日本の祝い事に欠かせない縁起物の魚。真鯛は白身で上品な味わい。焼き物や煮付け、刺身など様々な調理法で食べられる。"
+      bushu: "魚",
+      strokes: 15,
+      description: "日本の祝い事に欠かせない縁起物の魚。真鯛は白身で上品な味わい。焼き物や煮付け、刺身など様々な調理法で食べられる。"
     },
     {
-      "id": 5,
-      "kanji": "鰯",
-      "reading": { 
-        "kun": ["いわし"],
-        "on": ["れい"]
+      id: 5,
+      kanji: "鰯",
+      reading: { 
+        kun: {
+          primary: ["いわし"],
+          alternative: []
+        },
+        on: ["れい"]
       },
-      "bushu": "魚",
-      "strokes": 19,
-      "description": "小魚の代表格で、群れで泳ぐ習性がある。カルシウムが豊富で、丸ごと食べられる。干物や蒲焼、つみれなど様々な料理に使われる。"
+      bushu: "魚",
+      strokes: 19,
+      description: "小魚の代表格で、群れで泳ぐ習性がある。カルシウムが豊富で、丸ごと食べられる。干物や蒲焼、つみれなど様々な料理に使われる。"
     }
   ]
 }
@@ -201,6 +227,26 @@ h1 {
   padding: 10px;
   background: #f5f5f5;
   border-radius: 6px;
+}
+
+.reading-section {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.reading-section:last-child {
+  margin-bottom: 0;
+}
+
+.reading-label {
+  min-width: 70px;
+  font-weight: bold;
+}
+
+.alternative-reading {
+  margin-top: 4px;
+  font-size: 0.9em;
+  color: #666;
 }
 
 .detail-info {

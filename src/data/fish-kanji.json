@@ -4,7 +4,10 @@
       "id": 1,
       "kanji": "鮪",
       "reading": {
-        "kun": ["まぐろ", "しび"],
+        "kun": {
+          "primary": ["まぐろ"],
+          "alternative": ["しび"]
+        },
         "on": ["ゆう", "き"]
       },
       "bushu": "魚",
@@ -15,7 +18,10 @@
       "id": 2,
       "kanji": "鯖",
       "reading": {
-        "kun": ["さば"],
+        "kun": {
+          "primary": ["さば"],
+          "alternative": []
+        },
         "on": ["せい"]
       },
       "bushu": "魚",
@@ -26,7 +32,10 @@
       "id": 3,
       "kanji": "鮭",
       "reading": {
-        "kun": ["さけ", "しゃけ"],
+        "kun": {
+          "primary": ["さけ"],
+          "alternative": ["しゃけ"]
+        },
         "on": ["かい", "けい"]
       },
       "bushu": "魚",
@@ -37,7 +46,10 @@
       "id": 4,
       "kanji": "鯛",
       "reading": {
-        "kun": ["たい"],
+        "kun": {
+          "primary": ["たい"],
+          "alternative": []
+        },
         "on": ["ちょう"]
       },
       "bushu": "魚",
@@ -48,7 +60,10 @@
       "id": 5,
       "kanji": "鰯",
       "reading": {
-        "kun": ["いわし"],
+        "kun": {
+          "primary": ["いわし"],
+          "alternative": []
+        },
         "on": ["れい"]
       },
       "bushu": "魚",
