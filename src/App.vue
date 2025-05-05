@@ -151,6 +151,7 @@ header {
 h1 {
   font-size: 2em;
   color: #333;
+  font-family: "Hina Mincho", serif;
 }
 
 .kanji-grid {
