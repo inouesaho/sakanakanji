@@ -1,0 +1,214 @@
+{
+  "kanji_list": [
+    {
+      "id": 1,
+      "kanji": "鮪",
+      "reading": {
+        "kun": {
+          "primary": ["まぐろ"],
+          "alternative": ["しび"]
+        },
+        "on": ["ゆう", "き"]
+      },
+      "bushu": "魚",
+      "strokes": 17,
+      "description": "大型の回遊魚。赤身の身は刺身や寿司の代表的な魚として知られる。マグロの中でも特に本マグロ（クロマグロ）は「海の大物」として珍重される。"
+    },
+    {
+      "id": 2,
+      "kanji": "鯖",
+      "reading": {
+        "kun": {
+          "primary": ["さば"],
+          "alternative": []
+        },
+        "on": ["せい"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "背中が青く、腹が銀白色の魚。DHAやEPAが豊富で栄養価が高い。しめ鯖や味噌煮が代表的な料理。"
+    },
+    {
+      "id": 3,
+      "kanji": "鮭",
+      "reading": {
+        "kun": {
+          "primary": ["さけ"],
+          "alternative": ["しゃけ"]
+        },
+        "on": ["かい", "けい"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "産卵期になると川を上る習性を持つ魚。身は鮮やかなピンク色で、焼き魚や塩辛、切り身など様々な料理に使われる。"
+    },
+    {
+      "id": 4,
+      "kanji": "鯛",
+      "reading": {
+        "kun": {
+          "primary": ["たい"],
+          "alternative": []
+        },
+        "on": ["ちょう"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "日本の祝い事に欠かせない縁起物の魚。真鯛は白身で上品な味わい。焼き物や煮付け、刺身など様々な調理法で食べられる。"
+    },
+    {
+      "id": 5,
+      "kanji": "鰯",
+      "reading": {
+        "kun": {
+          "primary": ["いわし"],
+          "alternative": []
+        },
+        "on": ["れい"]
+      },
+      "bushu": "魚",
+      "strokes": 19,
+      "description": "小魚の代表格で、群れで泳ぐ習性がある。カルシウムが豊富で、丸ごと食べられる。干物や蒲焼、つみれなど様々な料理に使われる。"
+    },
+    {
+      "id": 6,
+      "kanji": "鯉",
+      "reading": {
+        "kun": {
+          "primary": ["こい"],
+          "alternative": []
+        },
+        "on": ["り"]
+      },
+      "bushu": "魚",
+      "strokes": 14,
+      "description": "日本の川を代表する魚。鯉のぼりや錦鯉として親しまれ、文化的にも重要。煮付けや甘露煮などの料理で食べられる。"
+    },
+    {
+      "id": 7,
+      "kanji": "鱒",
+      "reading": {
+        "kun": {
+          "primary": ["ます"],
+          "alternative": []
+        },
+        "on": ["そん"]
+      },
+      "bushu": "魚",
+      "strokes": 22,
+      "description": "サケ科の淡水魚。渓流釣りの人気魚。身は淡いピンク色で、塩焼きや刺身として美味。代表的な種に虹鱒（にじます）がある。"
+    },
+    {
+      "id": 8,
+      "kanji": "鰻",
+      "reading": {
+        "kun": {
+          "primary": ["うなぎ"],
+          "alternative": []
+        },
+        "on": ["まん"]
+      },
+      "bushu": "魚",
+      "strokes": 20,
+      "description": "川と海を行き来する回遊魚。夏の食材として有名で、蒲焼は日本の伝統的な料理。ビタミンAが豊富で、スタミナ食として知られる。"
+    },
+    {
+      "id": 9,
+      "kanji": "鮎",
+      "reading": {
+        "kun": {
+          "primary": ["あゆ"],
+          "alternative": []
+        },
+        "on": ["ねん"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "清流の女王と呼ばれる淡水魚。香魚とも呼ばれ、独特の香りが特徴。塩焼きや甘露煮が代表的な料理で、夏の風物詩。"
+    },
+    {
+      "id": 10,
+      "kanji": "鯰",
+      "reading": {
+        "kun": {
+          "primary": ["なまず"],
+          "alternative": []
+        },
+        "on": ["ねん"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "大きなひげを持つ淡水魚。泥底に生息し、かば焼きや煮付けにして食べられる。地震の前に暴れるという言い伝えがある。"
+    },
+    {
+      "id": 11,
+      "kanji": "鮒",
+      "reading": {
+        "kun": {
+          "primary": ["ふな"],
+          "alternative": []
+        },
+        "on": ["ほ"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "コイ科の淡水魚。琵琶湖の特産品として知られる鮒寿司がある。煮付けや甘露煮としても食べられる。"
+    },
+    {
+      "id": 12,
+      "kanji": "鱧",
+      "reading": {
+        "kun": {
+          "primary": ["はも"],
+          "alternative": []
+        },
+        "on": ["れい"]
+      },
+      "bushu": "魚",
+      "strokes": 22,
+      "description": "川と海を行き来する魚。関西の夏の味覚として知られ、骨切りの技術が必要。椀物や酢の物、てっちりなどで食べられる。"
+    },
+    {
+      "id": 13,
+      "kanji": "鯊",
+      "reading": {
+        "kun": {
+          "primary": ["おいかわ"],
+          "alternative": []
+        },
+        "on": ["さ"]
+      },
+      "bushu": "魚",
+      "strokes": 16,
+      "description": "コイ科の淡水魚。河川の中流域に生息し、群れで泳ぐ。塩焼きや天ぷらにして食べられる。"
+    },
+    {
+      "id": 14,
+      "kanji": "鮫",
+      "reading": {
+        "kun": {
+          "primary": ["いわな"],
+          "alternative": []
+        },
+        "on": ["こう"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "サケ科の淡水魚。渓流に生息し、釣りの対象魚として人気。塩焼きや煮付けにして食べられる。"
+    },
+    {
+      "id": 15,
+      "kanji": "鯇",
+      "reading": {
+        "kun": {
+          "primary": ["わかさぎ"],
+          "alternative": []
+        },
+        "on": ["へん"]
+      },
+      "bushu": "魚",
+      "strokes": 15,
+      "description": "湖や川に生息する小型の魚。天ぷらや佃煮、干物にして食べられる。特に琵琶湖や諏訪湖の特産品として知られる。"
+    }
+  ]
+}
