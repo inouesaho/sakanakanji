@@ -59,7 +59,7 @@ export default {
     },
     async loadKanjiData() {
       try {
-        const response = await fetch('/fish-kanji.json')
+        const response = await fetch('/sakanakanji/fish-kanji.json')
         const data = await response.json()
         this.kanjiList = data.kanji_list
       } catch (error) {
